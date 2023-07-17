@@ -6,7 +6,7 @@ function App() {
   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
     useGeolocated({
       positionOptions: {
-        enableHighAccuracy: false,
+        enableHighAccuracy: true,
       },
       userDecisionTimeout: 2000,
     });
@@ -19,15 +19,15 @@ function App() {
     <table>
       <tbody>
         <tr>
-          <td>latitude</td>
+          <td>latitude :</td>
           <td>{coords.latitude}</td>
         </tr>
         <tr>
-          <td>longitude</td>
+          <td>longitude :</td>
           <td>{coords.longitude}</td>
         </tr>
         <tr>
-          <td>speed</td>
+          <td>speed :</td>
           <td>{coords.speed}</td>
         </tr>
       </tbody>
